@@ -1,1 +1,6 @@
-len(12345)
+len("12345")
+print(type("abc"))
+print(type(23))
+print(type([6.6,"harsh",2555]))
+print(type((6.767,"767",89)))
+print(type({"num":33,"num2":45}))

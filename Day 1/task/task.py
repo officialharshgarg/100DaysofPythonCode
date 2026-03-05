@@ -1,2 +1,5 @@
-# Write your code below this line 👇
-print("Hello world!")
+print("Hello There!\nPlease enter the city you grew up in.")
+city=input()
+print("Enter your pet name:")
+pet=input()
+print("Your Brand is: "+city+" "+pet)
