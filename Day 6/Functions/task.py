@@ -1,6 +1,6 @@
 #Creating the function
 def name():
-    name = input("What is your name? ")
+    name = input("What's your name? ")
     print("Hello, " + name)
     # Inside the function
 
