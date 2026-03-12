@@ -10,18 +10,17 @@ for position in range(word_length):
     placeholder += "_"
 print(placeholder)
 
-# TODO-1: - Use a while loop to let the user guess again.
+def check_letter(placeholder,word_length):
+ while word_length > 0:
+    guess = input("Guess a letter: ").lower()
+    for letter in chosen_word:
+       if letter == guess:
+           placeholder += letter
+           word_length -= 1
+       else:
+           placeholder += "_"
+    print(placeholder)
+placeholder = ""
+check_letter(placeholder, word_length)
 
-guess = input("Guess a letter: ").lower()
 
-display = ""
-
-# TODO-2: Change the for loop so that you keep the previous correct letters in display.
-
-for letter in chosen_word:
-    if letter == guess:
-        display += letter
-    else:
-        display += "_"
-
-print(display)
