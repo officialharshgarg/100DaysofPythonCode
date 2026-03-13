@@ -9,7 +9,7 @@ word_length = len(chosen_word)
 for position in range(word_length):
     placeholder += "_"
 print(placeholder)
-
+correc
 def check_letter(placeholder,word_length):
  while word_length > 0:
     guess = input("Guess a letter: ").lower()
