@@ -10,19 +10,21 @@ for position in range(word_length):
     placeholder += "_"
 print(placeholder)
 correct_letters = []
+placeholder = ""
 for letter in chosen_word:
  def check_letter(placeholder,word_length):
-  while word_length > 0:
+  while not game_over:
     guess = input("Guess a letter: ").lower()
     for letter in chosen_word:
        if letter == guess:
            placeholder += letter
            word_length -= 1
        elif letter == guess:
-               correct_letters.append(letter)
+               correct_letters+=guess
+               print(correct_letters)
        else:
            placeholder += "_"
-    print(placeholder)
+           print(correct_letters.append(placeholder))
 placeholder = ""
 check_letter(placeholder, word_length)
 print(correct_letters)
