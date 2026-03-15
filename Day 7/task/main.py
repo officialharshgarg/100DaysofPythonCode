@@ -31,10 +31,11 @@ while not game_over:
             correct_letters.append(guess)
         elif letter in correct_letters:
             display += letter
-        elif letter in display:
-            print(f"you've already guessed {guess}")
         else:
             display += "_"
+
+    if guess in display:
+        print(f"you've already guessed {guess}, no life lost")
 
     print("Word to guess: " + display)
 
