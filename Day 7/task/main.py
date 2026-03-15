@@ -35,7 +35,7 @@ while not game_over:
             display += "_"
 
     if guess in display:
-        print(f"you've already guessed {guess}, no life lost")
+        print(f"you've already guessed '{guess}', no life lost")
 
     print("Word to guess: " + display)
 
