@@ -1,6 +1,7 @@
 import random
 from hangman_words import word_list
 from hangman_art import logo
+from hangman_art import stages
 
 print(logo)
 lives = 6
@@ -45,12 +46,11 @@ while not game_over:
         if lives == 0:
             game_over = True
 
-            # TODO 7: - Update the print statement below to give the user the correct word they were trying to guess.
             print(f"***********************YOU LOSE**********************")
+            print(f"You lose! The word was: {chosen_word}")
 
     if "_" not in display:
         game_over = True
         print("****************************YOU WIN****************************")
 
-    # TODO-2: - Update the code below to use the stages List from the file hangman_art.py
     print(stages[lives])
