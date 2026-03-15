@@ -23,8 +23,6 @@ while not game_over:
     print("****************************<???>/6 LIVES LEFT****************************")
     guess = input("Guess a letter: ").lower()
 
-    # TODO-4: - If the user has entered a letter they've already guessed, print the letter and let them know.
-
     display = ""
 
     for letter in chosen_word:
@@ -40,10 +38,8 @@ while not game_over:
 
     print("Word to guess: " + display)
 
-    # TODO-5: - If the letter is not in the chosen_word, print out the letter and let them know it's not in the word.
-    #  e.g. You guessed d, that's not in the word. You lose a life.
-
     if guess not in chosen_word:
+        print(f"You guessed {guess}, that's not in the word. You lose a life")
         lives -= 1
 
         if lives == 0:
