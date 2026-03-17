@@ -6,4 +6,4 @@ def greet_with_name(name,location):
     print(f"you are from, {location}")
 
 
-greet_with_name("Jack Bauer")
+greet_with_name("Jack Bauer","Delhi")
