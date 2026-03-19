@@ -13,16 +13,22 @@ def encrypt(original_text, shift):
             if pos==len(alphabet)-1:
                 pos=0
                 encrypt_char = alphabet[pos+shift]
-            elif pos>19 and shift >6:
-                pos
+            elif pos < 20 and shift < 7 or pos < 7 and shift < 20:
+                encrypt_char = alphabet[pos+shift]
+            elif pos > 19:
+                if shift + pos == len(alphabet):
+                    encrypt_char = alphabet[pos+shift]
+                elif shift + pos < len(alphabet):
+                    encrypt_char = alphabet[pos + shift]
+                elif shift + pos > len(alphabet):
+                    excess = (shift + pos)-len(alphabet)
+                    pos=0
+                    encrypt_char = alphabet[pos+excess]
         elif shift > len(alphabet):
                 excess=shift-len(alphabet)
                 pos=shift
                 encrypt_char = alphabet[pos+shift]
+    return encrypt_char
 
-
-# TODO-4: What happens if you try to shift z forwards by 9? Can you fix the code?
-
-# TODO-3: Call the 'encrypt()' function and pass in the user inputs. You should be able to test the code and encrypt a
-#  message.
-
+encrypt_text=encrypt(text, shift)
+print(encrypt_text)
