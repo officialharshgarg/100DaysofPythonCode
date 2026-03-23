@@ -39,7 +39,6 @@ def play_game():
         else:
             game_over = True
 
-    # Computer's turn
     while total_score(computer) < 17:
         computer.append(deal_card())
 
@@ -57,5 +56,4 @@ def play_game():
     else:
         print("It's a draw!")
 
-# Run game
 play_game()
