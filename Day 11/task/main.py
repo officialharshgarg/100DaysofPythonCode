@@ -29,7 +29,7 @@ def play_game():
         print(f"Computer's first card: {computer[0]}")
 
         if user_score > 21:
-            print("You went over. You lose 😢")
+            print("You went over. You lose ")
             return
 
         choice = input("Type 'y' to get another card or 'n' to pass: ")
@@ -51,9 +51,9 @@ def play_game():
     print(f"Computer's cards: {computer}, score: {comp_score}")
 
     if comp_score > 21 or user_score > comp_score:
-        print("You win! 🎉")
+        print("You win! ")
     elif user_score < comp_score:
-        print("Computer wins! 🤖")
+        print("Computer wins!")
     else:
         print("It's a draw!")
 
