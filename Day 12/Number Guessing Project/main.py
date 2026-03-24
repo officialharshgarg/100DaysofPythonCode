@@ -3,21 +3,25 @@ from art import logo
 print(logo)
 print("Welcome to number guessing game\nI'm thinking of number between 1 to 100.")
 
-level=input("would you like easy or hard difficulty. Type 'easy' or 'hard'?")
+level=input("would you like easy or hard difficulty. Type 'easy' or 'hard'? ")
 num=random.randint(1,100)
 
 def guess_num(num, g):
     limit = g+1
     print(f"You have got {g} guesses to find the correct number.")
+    print(num)
     for n in range(1, limit):
-        if n != limit:
-                guess = int(input("Make a guess:"))
-                if guess < num:
-                    print("Your guess is too low.")
-                elif guess > num:
-                    print("Your guess is too high.")
-                elif guess == num:
-                    print("You guessed the correct number.")
+        if n != limit or guess != num:
+            guess = int(input("Make a guess: "))
+            if guess not in range(1, limit):
+                print("Enter a number between 1 and 100.")
+            if guess < num:
+                print("Your guess is too low.")
+            elif guess > num:
+                print("Your guess is too high.")
+            elif guess == num:
+                print("You guessed the correct number.")
+                break
         if n == g and guess != num:
             print("You ran out of guesses.")
 
