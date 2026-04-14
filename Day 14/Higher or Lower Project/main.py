@@ -1,3 +1,3 @@
 from art import logo
 print(logo)
-guess_game=""
+guess_game="j"
